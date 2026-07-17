@@ -23,7 +23,7 @@ COMO CONVERTEMOS O TEXTO DA CAMADA RAW (esse padrao se repete no SQL abaixo):
 ------------------------------------------------------------------------------
 """
 
-from scripts import banco
+import banco
 
 
 # 1) Esvaziar as tabelas SILVER (idempotencia).

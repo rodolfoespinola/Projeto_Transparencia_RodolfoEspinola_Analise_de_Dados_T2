@@ -61,7 +61,6 @@ TAMANHO_BLOCO = 50_000
 
 # ---------------------------------------------------------------------------
 # Mapeamento: cada arquivo CSV dentro do .zip -> tabela RAW correspondente
-# (o nome do CSV usa o ANO como prefixo, ex.: 2025_Viagem.csv)
 # ---------------------------------------------------------------------------
 ARQUIVOS = {
     "viagem":     {"csv": f"{ANO}_Viagem.csv",     "tabela_raw": "raw_viagem"},

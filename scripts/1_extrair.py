@@ -1,8 +1,8 @@
 import zipfile
 import gdown
 import pandas as pd
-from scripts import config
-from scripts import banco
+import config
+import banco
 
 # ---------------------------------------------------------------------------
 # Passo 1 - Biaxar o arquivo .zip na pasta data/
