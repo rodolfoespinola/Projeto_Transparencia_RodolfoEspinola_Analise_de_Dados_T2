@@ -18,7 +18,7 @@ e gráficos. Os dados correspondem a um recorte de 6 meses (jan-jun/2025).
 - **Python 3.10** - orquestração do pipeline, com as bibliotecas `pandas`, `gdown` para baixar o dataset do Google Drive e
   `mysql-connector-python` para a conexão com o banco.
 - **MySQL 8** - armazenamento das 3 camadas (Raw, Silver, Gold), com
-  chaves primarias/estrangeiras e constraints declaradas em SQL puro.
+  chaves primarias/estrangeiras e constraints.
 - **Jupyter Notebook** + **matplotlib** - camada de analise (Fase 3):
   consultas SQL, tabelas e gráficos das perguntas de negócio.
 - **Arquitetura Medallion** (Raw -> Silver -> Gold) como modelo de
@@ -60,7 +60,7 @@ dos `.py` (arquivos de tipos diferentes) e usa
 `sys.path.append('../scripts')` na primeira célula de código para
 conseguir importar `banco.py`/`config.py` de dentro de `notebooks/`.
 
-## Pre-requisitos
+## Pré-requisitos
 
 - Python 3.10+
 - MySQL 8
