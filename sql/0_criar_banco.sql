@@ -17,23 +17,23 @@ CREATE TABLE raw_viagem (
     num_proposta        VARCHAR(20),
     situacao            VARCHAR(50),
     viagem_urgente      VARCHAR(5),
-    justificativa		    VARCHAR(4000),
+    justificativa		VARCHAR(4000),
     cod_orgao_superior  VARCHAR(20),
     nome_orgao_superior VARCHAR(255),
-    cod_orgao_sol		    VARCHAR(20),
-    nome_orgao_sol		  VARCHAR(255),
-    cpf_viajante		    VARCHAR(30),
+    cod_orgao_sol		VARCHAR(20),
+    nome_orgao_sol		VARCHAR(255),
+    cpf_viajante		VARCHAR(30),
     nome_viajante       VARCHAR(255),
     cargo               VARCHAR(255),
-    funcao				      VARCHAR(255),
-    descricao_funcao	  VARCHAR(255),
+    funcao				VARCHAR(255),
+    descricao_funcao	VARCHAR(255),
     data_inicio         VARCHAR(10),
-    data_fim   		      VARCHAR(10),
-    destinos			      VARCHAR(4000),
-    motivo				      VARCHAR(4000),
-    valor_diarias		    VARCHAR(30),
-    valor_passagens		  VARCHAR(30),
-    valor_devolucao	 	  VARCHAR(30),
+    data_fim   		    VARCHAR(10),
+    destinos			VARCHAR(4000),
+    motivo				VARCHAR(4000),
+    valor_diarias		VARCHAR(30),
+    valor_passagens		VARCHAR(30),
+    valor_devolucao	 	VARCHAR(30),
     valor_outros_gastos VARCHAR(30)
 ) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;
 
@@ -43,12 +43,12 @@ CREATE TABLE raw_pagamento (
     num_proposta        VARCHAR(20),
     cod_orgao_superior  VARCHAR(20),
     nome_orgao_superior VARCHAR(255),
-    cod_orgao_pagador	  VARCHAR(20),
+    cod_orgao_pagador	VARCHAR(20),
     nome_orgao_pagador	VARCHAR(255),
-    cod_ug_pagadora		  VARCHAR(20),
-    nome_ug_pagadora	  VARCHAR(255),
-    tipo_pagamento		  VARCHAR(50),
-    valor				        VARCHAR(30)
+    cod_ug_pagadora		VARCHAR(20),
+    nome_ug_pagadora	VARCHAR(255),
+    tipo_pagamento		VARCHAR(50),
+    valor				VARCHAR(30)
 ) ENGINE=InnoDB;
 
 DROP TABLE IF EXISTS raw_passagem;
@@ -172,9 +172,3 @@ CREATE TABLE silver_trecho (
     CONSTRAINT ck_trecho_diarias CHECK (numero_diarias >= 0),
     CONSTRAINT uq_trecho_sequencia UNIQUE (id_viagem, sequencia_trecho)
 ) ENGINE=InnoDB;
-
--- txa de serviço precisa de formatação de numero
--- ver ultimo slide da aula para entender estrutura de pastas do projeto
-
-
-
