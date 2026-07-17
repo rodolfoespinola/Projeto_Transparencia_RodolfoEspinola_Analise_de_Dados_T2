@@ -51,7 +51,7 @@ data/                         -> .zip e .csv baixados (gitignored, gerado pela F
 outputs/                      -> gráficos exportados em PNG pelo notebook
 ```
 
-A **ordem de execucao segue a nomenclatura dos arquivos: 0 -> 1 -> 2 -> 3**, mesmo os
+A **ordem de execução segue a nomenclatura dos arquivos: 0 -> 1 -> 2 -> 3**, mesmo os
 arquivos estando em pastas diferentes (agrupados por tipo: `.sql`,
 `.py`, `.ipynb`).
 
@@ -150,7 +150,7 @@ entre as duas formas de calcular custo (por viagem vs por pagamento).
 ![Valor medio por tipo de pagamento](outputs/pergunta5_valor_medio_por_tipo_pagamento.png)
 
 DIÁRIAS tem o maior valor médio por pagamento (R$ 2.078,28), superando
-PASSAGEM (R$ 1.878,34) - possivelmente porque cada lançamento de DIÁRIA cobre vários dias de viagem em uma única transação, diferente da PASSAGEM que é um único valor por bilhete. RESTITUIÇÃO é o menor valor médio (R$ 245,70).
+PASSAGEM (R$ 1.878,34) - possivelmente porque cada lançamento de DIÁRIA cobre vários dias de viagem em uma única transação, diferente da PASSAGEM que é um único valor por trecho. RESTITUIÇÃO é o menor valor médio (R$ 245,70).
 
 ### 6. Meio de transporte mais usado nos trechos
 
