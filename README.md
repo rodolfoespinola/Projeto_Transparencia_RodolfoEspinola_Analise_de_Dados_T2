@@ -1,4 +1,4 @@
-# Pipeline ETL - Viagens a Servico (Portal da Transparencia)
+# Pipeline ETL - Viagens a Serviço (Portal da Transparência)
 
 ## O problema
 
@@ -86,7 +86,7 @@ conseguir importar `banco.py`/`config.py` de dentro de `notebooks/`.
 3. Crie o banco e as tabelas (Raw + Silver):
 
    ```
-   sql/0_criar_banco.sql
+   mysql -u root -p < sql/0_criar_banco.sql
    ```
 
 4. Rode o pipeline, na ordem, a partir da raiz do projeto:
@@ -119,18 +119,18 @@ milhões). Os dois juntos já superam a soma dos outros três do top 5.
 
 Com o filtro de pelo menos 30 viagens no grupo, os 3 primeiros colocados
 são todos strings repetidas de "Brasília/DF" (viagens com vários trechos
-dentro da propria capital), custando entre R$ 97,7 mil e R$ 105,5 mil em
-media - bem acima da media geral de uma viagem no dataset.
+dentro da própria capital), custando entre R$ 97,7 mil e R$ 105,5 mil - bem acima
+da media geral de uma viagem no dataset.
 
 ### 3. Viagem de maior duração
 
 ![Custo total das 3 viagens mais longas com custo registrado](outputs/pergunta3_comparacao_viagens_longas.png)
 
-A viagem mais longa do recorte tem 383 dias (Ministerio da Previdência
+A viagem mais longa do recorte tem 383 dias (Ministério da Previdência
 Social) mas custo R$ 0,00 registrado até o momento - uma possibilidade
 é que os custos ainda não foram lançados no período de 6 meses do recorte
 dos dados. Como essa viagem não tem custo para
-exibir em num gráfico, foi feito o estudo das 3 viagens de maior duração que
+exibir num gráfico, foi feito o estudo das 3 viagens de maior duração que
 possuem `valor_total > 0` (378, 369 e 366 dias) - todas acima de R$ 100 mil,
 mostrando que viagens de longa duração tendem a custar
 acima de seis dígitos quando o custo já foi lançado.
@@ -145,11 +145,11 @@ Pública), agora somando os pagamentos individuais: R$ 488,8 milhões em
 por viagem (R$ 486,9 milhões), o que é um bom sinal de consistência
 entre as duas formas de calcular custo (por viagem vs por pagamento).
 
-### 5. Tipo de pagamento com maior valor medio
+### 5. Tipo de pagamento com maior valor médio
 
 ![Valor medio por tipo de pagamento](outputs/pergunta5_valor_medio_por_tipo_pagamento.png)
 
-DIÁRIAS tem o maior valor medio por pagamento (R$ 2.078,28), superando
+DIÁRIAS tem o maior valor médio por pagamento (R$ 2.078,28), superando
 PASSAGEM (R$ 1.878,34) - possivelmente porque cada lançamento de DIÁRIA cobre vários dias de viagem em uma única transação, diferente da PASSAGEM que é um único valor por bilhete. RESTITUIÇÃO é o menor valor médio (R$ 245,70).
 
 ### 6. Meio de transporte mais usado nos trechos
