@@ -98,7 +98,7 @@ conseguir importar `banco.py`/`config.py` de dentro de `notebooks/`.
 
 5. Abra `notebooks/3_analise.ipynb` e rode todas as células (cria a
    camada Gold e gera as respostas + gráficos das perguntas de negócio).
-   Cada gráfico também e exportado como PNG em `outputs/`.
+   Cada gráfico também é exportado como PNG em `outputs/`.
 
 ## Principais insights (Fase 3 - Gold)
 
